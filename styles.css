@@ -1,0 +1,1363 @@
+/* =========================================================
+   CONFIGURACIÓN GENERAL
+   ========================================================= */
+
+
+/*
+    El selector * selecciona todos los elementos.
+    Quitamos los márgenes y espacios predeterminados.
+*/
+
+* {
+
+    margin: 0;
+
+    padding: 0;
+
+    box-sizing: border-box;
+
+}
+
+
+/*
+    Hace que los enlaces del menú
+    tengan un desplazamiento suave.
+*/
+
+html {
+
+    scroll-behavior: smooth;
+
+}
+
+
+/*
+    Estilos generales del documento.
+*/
+
+body {
+
+    font-family: "Playfair Display", serif;
+
+
+    background: #f1eade;
+
+    color: rgb(25, 8, 28);
+
+    line-height: 1.6;
+
+}
+
+
+/*
+    Quitamos el subrayado de los enlaces.
+*/
+
+a {
+
+    text-decoration: none;
+
+}
+
+
+/*
+    Las imágenes no sobrepasan
+    el ancho de su contenedor.
+*/
+
+img {
+
+    width: 100%;
+
+    display: block;
+
+}
+
+
+
+/* =========================================================
+   MENÚ
+   ========================================================= */
+
+header {
+
+    /*
+        Hace que el menú permanezca
+        visible al desplazarnos.
+    */
+
+    position: sticky;
+
+    top: 0;
+
+    z-index: 1000;
+
+
+    background: rgba(248, 231, 221, 0.96);
+
+    border-bottom: 1px solid #784004;
+
+}
+
+
+nav {
+
+    max-width: 1200px;
+
+    height: 75px;
+
+    margin: auto;
+
+    padding: 0 20px;
+
+
+    /*
+        Flexbox coloca los elementos
+        en una misma fila.
+    */
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+}
+
+
+
+/* LOGO */
+
+.logo {
+
+    color: rgb(230, 139, 21);
+
+    font-size: 25px;
+
+    font-weight: bold;
+
+}
+
+
+.logo span {
+
+    color: #ca590e;
+
+}
+
+
+
+/* ENLACES */
+
+.nav-links {
+
+    display: flex;
+
+    list-style: none;
+
+    gap: 28px;
+
+}
+
+
+.nav-links a {
+
+    color: #99340c;
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+    padding-bottom: 7px;
+
+    transition: 0.2s;
+
+}
+
+
+/*
+    :hover se activa cuando
+    colocamos el mouse encima.
+*/
+
+.nav-links a:hover {
+
+    color: #99340c;
+
+    border-bottom: 2px solid #99340c;
+
+}
+
+
+
+/* =========================================================
+   PORTADA
+   ========================================================= */
+
+.hero {
+
+    position: relative;
+
+    min-height: 620px;
+
+
+    display: flex;
+
+    align-items: center;
+
+
+    /*
+        Imagen de fondo.
+    */
+
+    background:
+
+        linear-gradient(
+            90deg,
+            rgba(244, 215, 182, 0.95),
+            rgba(5, 8, 18, 0.62),
+            rgba(5, 8, 18, 0.88)
+        ),
+
+        url("img/Baner.png");
+
+
+    background-size: cover;
+
+    background-position: center;
+
+}
+
+
+/*
+    Barra de color debajo de la portada.
+*/
+
+.hero::after {
+
+    content: "";
+
+    position: absolute;
+
+    bottom: 0;
+
+    left: 0;
+
+    width: 100%;
+
+    height: 4px;
+
+    background:
+
+        linear-gradient(
+            90deg,
+            #edc489,
+            #e39653,
+            #d3912e
+        );
+
+}
+
+
+/* CONTENIDO */
+
+.hero-content {
+
+    width: 100%;
+
+    max-width: 1200px;
+
+    margin: auto;
+
+    padding: 40px 20px;
+
+}
+
+
+.mini-title {
+
+    color: #df8020;
+
+    font-size: 12px;
+
+    font-weight: bold;
+
+    letter-spacing: 2px;
+
+}
+
+
+.hero h1 {
+
+    max-width: 800px;
+
+    font-size: 65px;
+
+    line-height: 1.05;
+
+    margin: 18px 0;
+
+}
+
+
+.hero h1 span {
+
+    color: #ff7f3f;
+
+}
+
+
+.hero-text {
+
+    max-width: 600px;
+
+    color: #e0920b;
+
+    font-size: 18px;
+
+    margin-bottom: 28px;
+
+}
+
+
+
+/* =========================================================
+   BOTÓN PRINCIPAL
+   ========================================================= */
+
+.cta-button {
+
+    display: inline-block;
+
+    padding: 13px 23px;
+
+    background: #ffac3f;
+
+    color: white;
+
+    border-radius: 6px;
+
+    font-weight: bold;
+
+    transition: 0.2s;
+
+    box-shadow:
+        0 0 20px rgba(231, 191, 158, 0.463);
+
+}
+
+
+.cta-button:hover {
+
+    background: #e9b983;
+
+    transform: translateY(-2px);
+
+}
+
+
+
+/* =========================================================
+   PELÍCULAS
+   ========================================================= */
+
+#peliculas {
+
+    padding: 15px 20px;
+
+    background:
+
+        radial-gradient(
+            circle at top right,
+            rgba(223, 196, 134, 0.899),
+            transparent 30%
+        ),
+
+        #deb531;
+
+}
+
+
+
+/* =========================================================
+   TÍTULO DE SECCIÓN
+   ========================================================= */
+
+.section-title {
+
+    max-width: 1200px;
+
+    margin: auto;
+
+    margin-bottom: 35px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: end;
+
+}
+
+
+.section-number {
+
+    color: #e67710;
+
+    font-size: 12px;
+
+    font-weight: bold;
+
+    letter-spacing: 2px;
+
+}
+
+
+.section-title h2 {
+
+    font-size: 40px;
+
+    margin: 6px 0;
+
+}
+
+
+.section-title h2 span {
+
+    color: #ce760a;
+
+}
+
+
+.section-description {
+
+    color: #ae7905d3;
+
+}
+
+
+.total-peliculas {
+
+    color: #febe00d3;
+
+    font-size: 13px;
+
+}
+
+
+
+/* =========================================================
+   GRID DE PELÍCULAS
+   ========================================================= */
+
+.peliculas-grid {
+
+    max-width: 1200px;
+
+    margin: auto;
+
+    display: grid;
+
+
+    /*
+        5 columnas en pantallas grandes.
+    */
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 18px;
+
+    padding: 15px;
+    
+
+}
+
+
+
+/* =========================================================
+   TARJETAS
+   ========================================================= */
+
+.pelicula-card {
+
+    background: #f4e0b8;
+
+    border: 1px solid #ddaf24;
+
+    border-radius: 9px;
+
+    overflow: hidden;
+
+    transition: 0.25s;
+
+}
+
+
+/*
+    Efecto al colocar el mouse encima.
+*/
+
+.pelicula-card:hover {
+
+    transform: translateY(-8px);
+
+    border-color: #ea954a;
+
+    box-shadow:
+
+        0 15px 35px rgb(231, 208, 124),
+
+        0 0 20px rgba(255, 210, 63, 0.8);
+
+}
+
+
+
+/* =========================================================
+   POSTERS
+   ========================================================= */
+
+.poster {
+
+    height: 160px;
+
+    position: relative;
+
+    overflow: hidden;
+
+    background: #f0a83c;
+
+}
+
+
+.poster img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    transition: 0.3s;
+
+}
+
+
+/*
+    Zoom de la imagen.
+*/
+
+.pelicula-card:hover .poster img {
+
+    transform: scale(1.05);
+
+}
+
+
+
+/* =========================================================
+   AÑO
+   ========================================================= */
+
+
+
+
+
+/* =========================================================
+   INFORMACIÓN
+   ========================================================= */
+
+.card-content {
+
+    padding: 15px;
+
+}
+
+
+.genero {
+
+    color: #ff7f3f;
+
+    font-size: 10px;
+
+    font-weight: bold;
+
+    letter-spacing: 1px;
+
+}
+
+
+.card-content h3 {
+
+    font-size: 15px;
+
+    margin: 4px 0;
+
+}
+
+
+.card-content > p:not(.genero) {
+
+    color: #3f4041;
+
+    font-size: 13px;
+
+    min-height: 105px;
+
+    margin-bottom: 15px;
+
+}
+
+
+
+/* =========================================================
+   VER DETALLES
+   ========================================================= */
+
+
+/*
+    details crea una sección desplegable.
+*/
+
+details {
+
+    border-top: 1px solid #e09318;
+
+    padding-top: 10px;
+
+}
+
+
+/*
+    summary funciona como botón.
+*/
+
+summary {
+
+    list-style: none;
+
+    cursor: pointer;
+
+    text-align: center;
+
+    padding: 9px;
+
+    border: 1px solid #ff7f3f;
+
+    border-radius: 5px;
+
+    color: white;
+
+    font-size: 12px;
+
+    font-weight: bold;
+
+    transition: 0.2s;
+
+}
+
+
+/*
+    Eliminamos el marcador
+    predeterminado del navegador.
+*/
+
+summary::-webkit-details-marker {
+
+    display: none;
+
+}
+
+
+summary:hover {
+
+    background: #ff7f3f;
+
+}
+
+
+/*
+    Área de la descripción.
+*/
+
+.descripcion-detalle {
+
+    margin-top: 12px;
+
+    padding: 12px;
+
+    background: #fddb9a;
+
+    border-left: 3px solid #ecaf58;
+
+    border-radius: 5px;
+
+}
+
+
+/*
+    Los textos de la descripción.
+*/
+
+.descripcion-detalle p {
+
+    color: #1b1604 !important;
+
+    font-size: 12px !important;
+
+    min-height: auto !important;
+
+    margin-bottom: 10px !important;
+
+}
+
+
+.descripcion-detalle p:last-child {
+
+    margin-bottom: 0 !important;
+
+}
+
+
+
+/* =========================================================
+   LA DÉCADA
+   ========================================================= */
+
+#decada {
+
+    padding: 75px 20px;
+
+    background:
+
+        linear-gradient(
+            90deg,
+            #0d1121,
+            #081c2d
+        );
+
+    border-top: 1px solid #202c46;
+
+    border-bottom: 1px solid #202c46;
+
+}
+
+
+.decada-container {
+
+    max-width: 1200px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns:
+        1fr 1.5fr;
+
+    gap: 60px;
+
+    align-items: center;
+
+}
+
+
+.decada-texto h2 {
+
+    font-size: 42px;
+
+    margin: 7px 0;
+
+}
+
+
+.decada-texto h2 span {
+
+    color: #ff7f3f;
+
+}
+
+
+.decada-texto p:last-child {
+
+    max-width: 560px;
+
+    color: #000000;
+
+}
+
+
+
+
+
+/* =========================================================
+   ELEMENTOS DE LA DÉCADA
+   ========================================================= */
+
+.decada-items {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+}
+
+
+.decada-items div {
+
+    padding: 20px 10px;
+
+    text-align: center;
+
+    border-left: 1px solid #30405b;
+
+}
+
+
+.decada-items strong {
+
+    display: block;
+
+    font-size: 30px;
+
+    margin-bottom: 8px;
+
+}
+
+
+.decada-items span {
+
+    color: #929bad;
+
+    font-size: 12px;
+
+}
+
+
+
+
+
+
+
+/* =========================================================
+   VISOR DE IMAGEN
+   ========================================================= */
+
+
+/*
+    Esta ventana ocupa toda la pantalla.
+*/
+
+.visor-imagen {
+
+    position: fixed;
+
+    top: 0;
+
+    left: 0;
+
+    width: 100%;
+
+    height: 100%;
+
+    background: rgba(0, 0, 0, 0.90);
+
+    display: none;
+
+    align-items: center;
+
+    justify-content: center;
+
+    flex-direction: column;
+
+    padding: 30px;
+
+    z-index: 2000;
+
+}
+
+
+/*
+    Cuando se agrega la clase "mostrar",
+    hacemos visible el visor.
+*/
+
+.visor-imagen.mostrar {
+
+    display: flex;
+
+}
+
+
+/*
+    Imagen ampliada.
+*/
+
+.visor-imagen img {
+
+    max-width: 85%;
+
+    max-height: 80vh;
+
+    width: auto;
+
+    height: auto;
+
+    border-radius: 8px;
+
+    border: 2px solid #ff3f9f;
+
+    box-shadow:
+
+        0 0 35px rgba(255, 63, 159, 0.25);
+
+}
+
+
+/*
+    Nombre de la película.
+*/
+
+#nombre-imagen {
+
+    margin-top: 15px;
+
+    color: white;
+
+    font-size: 20px;
+
+    font-weight: bold;
+
+}
+
+
+/*
+    Botón X.
+*/
+
+.cerrar {
+
+    position: absolute;
+
+    top: 20px;
+
+    right: 30px;
+
+    color: white;
+
+    font-size: 45px;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+
+}
+
+
+.cerrar:hover {
+
+    color: #ff7f3f;
+
+}
+
+
+
+/* =========================================================
+   CONTACTO
+   ========================================================= */
+
+#contacto {
+
+    padding: 75px 20px;
+
+    background: #050912;
+
+}
+
+
+.contacto-container {
+
+    max-width: 900px;
+
+    margin: auto;
+
+    padding: 35px;
+
+    background: #e9d9bd;
+
+    border: 1px solid #f1eade;
+
+    border-radius: 10px;
+
+}
+
+
+.contacto-container h2 {
+
+    font-size: 35px;
+
+    margin: 6px 0;
+
+}
+
+
+.contacto-container h2 span {
+
+    color: #ff7f3f;
+
+}
+
+
+.contacto-container p:not(.section-number) {
+
+    color: #ffffff;
+
+}
+
+
+
+/* =========================================================
+   FORMULARIO
+   ========================================================= */
+
+form {
+
+    margin-top: 25px;
+
+}
+
+
+.form-row {
+
+    display: grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    gap: 12px;
+
+}
+
+
+input,
+textarea {
+
+    width: 100%;
+
+    padding: 13px;
+
+    background: #f1eade;
+
+    border: 1px solid #ebb258;
+
+    border-radius: 6px;
+
+    color: rgb(14, 4, 4);
+
+    outline: none;
+
+}
+
+
+textarea {
+
+    height: 130px;
+
+    resize: vertical;
+
+    margin-top: 12px;
+
+}
+
+
+input:focus,
+textarea:focus {
+
+    border-color: #f8ad36;
+
+}
+
+
+form button {
+
+    margin-top: 12px;
+
+    padding: 12px 22px;
+
+    border: none;
+
+    border-radius: 6px;
+
+    background: #ffb53f;
+
+    color: white;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+
+}
+
+
+form button:hover {
+
+    background: #ffa763;
+
+}
+
+
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+footer {
+
+    background: #d4b789;
+
+    border-top: 1px solid #202a42;
+
+    padding: 30px 20px;
+
+}
+
+
+.footer-content {
+
+    max-width: 1200px;
+
+    margin: auto;
+
+    text-align: center;
+
+}
+
+
+.footer-content p {
+
+    color: #e3e9f6;
+
+    margin: 8px 0;
+
+}
+
+
+.footer-content small {
+
+    color: #d4daea;
+
+}
+
+
+
+/* =========================================================
+   TABLETS
+   ========================================================= */
+
+@media (max-width: 1100px) {
+
+    /*
+        En pantallas medianas
+        usamos 3 columnas.
+    */
+
+    .peliculas-grid {
+
+        grid-template-columns:
+            repeat(3, 1fr);
+
+    }
+
+}
+
+
+
+/* =========================================================
+   TABLETS PEQUEÑAS
+   ========================================================= */
+
+@media (max-width: 800px) {
+
+
+    nav {
+
+        height: auto;
+
+        padding: 18px 20px;
+
+        align-items: flex-start;
+
+    }
+
+
+    .nav-links {
+
+        gap: 12px;
+
+        flex-wrap: wrap;
+
+        justify-content: flex-end;
+
+    }
+
+
+    .nav-links a {
+
+        font-size: 12px;
+
+        padding: 4px 0;
+
+    }
+
+
+    .hero h1 {
+
+        font-size: 48px;
+
+    }
+
+
+    .peliculas-grid {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+
+    }
+
+
+    .decada-container {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .decada-items {
+
+        grid-template-columns:
+            repeat(4, 1fr);
+
+    }
+
+}
+
+
+
+/* =========================================================
+   CELULARES
+   ========================================================= */
+
+@media (max-width: 550px) {
+
+
+    /*
+        Ocultamos el menú para ahorrar espacio.
+    */
+
+    .nav-links {
+
+        display: none;
+
+    }
+
+
+    .hero {
+
+        min-height: 520px;
+
+    }
+
+
+    .hero h1 {
+
+        font-size: 40px;
+
+    }
+
+
+    .section-title {
+
+        display: block;
+
+    }
+
+
+    .total-peliculas {
+
+        margin-top: 10px;
+
+    }
+
+
+    .peliculas-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .poster {
+
+        height: 430px;
+
+    }
+
+
+    .decada-items {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+
+    }
+
+
+    .galeria-grid {
+
+        grid-template-columns:
+            1fr;
+
+    }
+
+
+    .galeria-item {
+
+        height: 400px;
+
+    }
+
+
+    .form-row {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .contacto-container {
+
+        padding: 24px;
+
+    }
+
+
+    .visor-imagen img {
+
+        max-width: 92%;
+
+        max-height: 75vh;
+
+    }
+
+
+    .cerrar {
+
+        top: 15px;
+
+        right: 20px;
+
+    }
+
+}

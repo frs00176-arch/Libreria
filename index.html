@@ -1,0 +1,808 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <!-- Permite utilizar caracteres como á, é, í, ó y ñ -->
+    <meta charset="UTF-8">
+
+    <!-- Hace que la página sea adaptable a celulares -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Título de la pestaña -->
+    <title>Estampa</title>
+
+    <!-- Conectamos el HTML con el archivo CSS -->
+    <link rel="stylesheet" href="styles.css">
+
+    <script src="script.js" defer></script>
+
+</head>
+
+
+<body>
+
+
+    <!-- =====================================================
+         MENÚ DE NAVEGACIÓN
+         ===================================================== -->
+
+    <header>
+
+        <nav>
+
+            <!-- Nombre / logo de la página -->
+            <div class="logo">
+
+                Estampa <span>librería</span>
+
+            </div>
+
+
+            <!-- Opciones del menú -->
+            <ul class="nav-links">
+
+                <li>
+                    <a href="#inicio">Inicio</a>
+                </li>
+
+                <li>
+                    <a href="#Catálogo">Catálogo</a>
+                </li>
+
+                <li>
+                    <a href="#Selección Estampa">Selección Estampa</a>
+                </li>
+
+
+                <li>
+                    <a href="#Nosotros">Nosotros</a>
+                </li>
+
+                <li>
+                    <a href="#Contacto">Contacto</a>
+                </li>
+
+                <button id="boton-carrito">🛒 <span id="contador">0</span></button>
+
+            </ul>
+
+        </nav>
+
+    </header>
+
+
+
+    <main>
+
+
+        <!-- =====================================================
+             PORTADA
+             ===================================================== -->
+
+        <section id="inicio" class="hero">
+
+            <!-- Contenido de la portada -->
+            <div class="hero-content">
+
+                <p class="mini-title">
+
+                    Librería Independiente & Curaduría Editorial
+
+                </p>
+
+
+                <h1>
+
+                    Historias que dejan
+                    <span>huella</span>
+                    en cada página.
+
+                </h1>
+
+
+                <p class="hero-text">
+
+                    En Estampa seleccionamos meticulosamente obras de ficción, ensayo,
+                    arte, ilustración y libros objeto. Un refugio para quienes leen con calma
+                    y buscan belleza visual.
+
+                </p>
+
+
+                <!-- Botón que lleva a las películas -->
+                <a href="#Catálogo" class="cta-button">
+
+                    Ver Catálogo →
+
+                </a>
+
+                <a href="SelecciónEstampa" class="cta-button">
+                    Recomendaciones del mes
+                </a>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================================
+             PELÍCULAS
+             ===================================================== -->
+
+        <section id="Catálogo">
+
+
+            <!-- Título de la sección -->
+
+            <div class="section-title">
+
+                <div>
+
+
+                    <p class="section-number">
+                        
+                    </p>
+
+
+                    <h2>
+
+                        Catálogo de
+                        <span>libros</span>
+
+                    </h2>
+
+
+                    <p class="section-description">
+
+                        Una selección de clásicos del los mejores
+                        libro.
+
+                    </p>
+
+                </div>
+
+
+                <p class="total-peliculas">
+                     8 libros
+                </p>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 TARJETAS DE PELÍCULAS
+                 ================================================= -->
+
+            <div class="peliculas-grid">
+
+
+                <!-- =================================================
+                     PELÍCULA 1
+                     ================================================= -->
+
+                <div class="pelicula-card">
+
+
+                    <div class="poster">
+
+                        <img
+                            src="img/libro 1.avif"
+                            alt="Diana Taurasi"
+                        >
+
+                       
+
+                    </div>
+
+
+                    <div class="card-content">
+
+
+                        <p class="genero">
+                            Ficción y Narrativa
+                        </p>
+
+
+                        <h3>
+                            Cien años de soledad
+                        </h3>
+
+                        <h5>
+                            Gabriel García Márquez
+                        </h5>
+
+
+                        
+
+
+                       <button class="agregar">agregar al carrito</button>
+
+                        
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- =================================================
+                     PELÍCULA 2
+                     ================================================= -->
+
+                <div class="pelicula-card">
+
+
+                    <div class="poster">
+
+                        <img
+                            src="img/libro 2.avif"
+                            alt="Sue Bird"
+                        >
+
+                    
+
+                    </div>
+
+
+                    <div class="card-content">
+
+
+                        <p class="genero">
+                            Pensamiento y Realidad
+
+                        </p>
+
+
+                        <h3>
+                            El infinito en un junco
+                
+                        </h3>
+
+
+                        <h5>
+                            Irene Vallejo
+                        </h5>
+
+                        <button class="agregar">agregar al carrito</button>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- =================================================
+                     PELÍCULA 3
+                     ================================================= -->
+
+                <div class="pelicula-card">
+
+
+                    <div class="poster">
+
+                        <img
+                            src="img/libro 3.avif"
+                            alt="Leonie Fiebich"
+                        >
+
+                       
+
+                    </div>
+
+
+                    <div class="card-content">
+
+
+                        <p class="genero">
+                            Arte y Creatividad
+                        </p>
+
+
+                        <h3>
+                            Bauhaus: Historia y...
+                        </h3>
+
+                        
+                        <h5>
+                            Magdalena Droste
+                        </h5>
+
+                        <button class="agregar">agregar al carrito</button>
+
+
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- =================================================
+                     PELÍCULA 4
+                     ================================================= -->
+
+                <div class="pelicula-card">
+
+
+                    <div class="poster">
+
+                        <img
+                            src="img/libro 4.avif"
+                            alt="Zhang Ziyu"
+                        >
+
+                        
+
+                    </div>
+
+
+                    <div class="card-content">
+
+
+                        <p class="genero">
+                            Estilo de Vida y Bienestar
+
+                        </p>
+
+
+                        <h3>
+                            Hábitos Atómicos
+                        </h3>
+
+
+                        <h5>
+                            James Clear
+                        </h5>
+
+                        <button class="agregar">agregar al carrito</button>
+
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- =================================================
+                     PELÍCULA 5
+                     ================================================= -->
+
+                <div class="pelicula-card">
+
+
+                    <div class="poster">
+
+                        <img
+                            src="img/libro 5.avif"
+                            alt="Alba Torrens"
+                        >
+
+                        
+
+                    </div>
+
+
+                    <div class="card-content">
+
+
+                        <p class="genero">
+                            Infantil y Juvenil
+
+                        </p>
+
+
+                        <h3>
+                            El Principito (Edición de Lujo)
+                        </h3>
+
+                        <h5>
+                            Antoine de Saint-Exupéry
+                        </h5>
+
+                        <button class="agregar">agregar al carrito</button>
+
+
+
+                    </div>
+
+                </div>
+
+
+                <div class="pelicula-card">
+
+                    <div class="poster">
+
+                        <img
+                           src="img/libro 6.avif"
+                        >
+
+                       
+
+                    </div>
+
+                    <div class="card-content">
+
+                         <p class="genero">
+                            Ficción y Narrativa
+
+                        </p>
+
+
+                        <h3>
+                            La vegetariana
+                        </h3>
+
+                        <h5>
+                            Han Kang
+                        </h5>
+
+                        <button class="agregar">agregar al carrito</button>
+
+
+
+                    </div>
+                </div>
+
+                <div class="pelicula-card">
+
+                    <div class="poster">
+
+                        <img
+                           src="img/libro 7.avif"
+                        >
+
+                        
+
+                    </div>
+
+                    <div class="card-content">
+
+                         <p class="genero">
+                            Arte y Creatividad
+
+                        </p>
+
+                        <h3>
+                            Atlas de la Arquitectura
+                        </h3>
+
+                        <h5>
+                            Kenneth Frampton
+                        </h5>
+
+                        <button class="agregar">agregar al carrito</button>
+
+
+
+                    </div>
+                </div>
+
+
+                <div class="pelicula-card">
+
+                    <div class="poster">
+
+                        <img
+                           src="img/libro 8.avif"
+                        >
+
+                       
+
+                    </div>
+
+                    <div class="card-content">
+
+                         <p class="genero">
+                            Pensamiento y Realidad
+
+                        </p>
+
+
+                        <h3>
+                            Pensar rápido, pensar despacio
+                        </h3>
+
+                        <h5>
+                            Daniel Kahneman
+                        </h5>
+
+                        <button class="agregar">agregar al carrito</button>
+
+
+                    </div>
+                    
+                </div>
+
+                
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================================
+             LA DÉCADA
+             ===================================================== -->
+
+        <section id="Selección Estampa">
+
+
+            <div class="decada-container">
+
+
+                <div class="decada-texto">
+
+                    <p class="section-number">
+                        
+                    </p>
+
+
+                    <h2>
+
+                        Seleccion
+                        <span>Estampa</span>
+
+                    </h2>
+
+
+                    <p>
+
+                        Obras esenciales que destacan por su voz única, diseño de portada y valor perdurable.
+                        Recomendaciones hechas a mano por nuestro equipo de libreros.
+                        
+                
+
+                    </p>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+        <section id="Nosotros">
+
+            <div class="section-title">
+
+                <div>
+
+                    <p class="section-number">
+                        Nuestra Identidad
+                    </p>
+
+                    <h2>
+
+                        Una librería creada para amar 
+                        <samp>los libros físicos</samp>
+
+                    </h2>
+
+                    <p>
+
+                        Nacimos con la convicción de que el libro no es solo un contenedor de texto, sino un
+                        objeto estético y afectivo. En Estampa cuidamos cada detalle: desde la selección de
+                        títulos de editoriales independientes hasta el papel de estraza con el que envolvemos
+                        cada pedido.
+
+                    </p>
+
+                    <p>
+
+                        Creemos en la lectura como un acto de resistencia frente a la prisa cotidiana.
+                        Bienvenidos a nuestro espacio.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================================
+             CONTACTO
+             ===================================================== -->
+
+        <section id="Contacto">
+
+
+            <div class="contacto-container">
+
+
+                <div>
+
+                    <p class="section-number">
+                        CONTACTO
+                    </p>
+
+
+                    <h2>
+
+                        ¿Cuál es tu
+                        <span>libro favorito?</span>
+
+                    </h2>
+
+
+                    <p>
+
+                        Comparte con nosotros tu escritor y libro
+                        favorito.
+
+                    </p>
+
+                </div>
+
+
+                <!-- Formulario -->
+
+                <form id="formulario">
+
+                    <div class="form-row">
+
+
+                        <input
+                            type="text"
+                            placeholder="Nombre"
+                            required
+                        >
+
+
+                        <input
+                            type="email"
+                            placeholder="Correo electrónico"
+                            required
+                        >
+
+                    </div>
+
+
+                    <textarea
+                        placeholder="Escribe tu comentario..."
+                        required
+                    ></textarea>
+
+
+                    <button type="submit">
+
+                        Enviar mensaje →
+
+                    </button>
+
+                </form>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+
+    <!-- =====================================================
+         FOOTER
+         ===================================================== -->
+
+    <footer>
+
+        <div class="footer-content">
+
+
+            <div class="logo">
+
+                Estampa <span>Librería</span>
+
+            </div>
+
+
+            <p>
+
+                Librería independiente online. Selección curada de narrativa,
+                ensayo, arte, ilustración y accesorios para amantes de los libros.
+
+            </p>
+
+
+            <small>
+
+                © 2026 Estampa Librería. Todos los derechos reservados.
+
+            </small>
+
+        </div>
+
+    </footer>
+
+
+
+    <!-- =====================================================
+         JAVASCRIPT
+         ===================================================== -->
+
+    <script>
+
+        /*
+            Esta función recibe la dirección de la imagen
+            y el nombre de la película.
+        */
+
+        function abrirImagen(imagen, nombre) {
+
+            /* Cambiamos la imagen del visor */
+
+            document.getElementById("imagen-grande").src = imagen;
+
+
+            /* Mostramos el nombre */
+
+            document.getElementById("nombre-imagen").textContent = nombre;
+
+
+            /* Mostramos la ventana */
+
+            document
+                .getElementById("visor-imagen")
+                .classList.add("mostrar");
+
+        }
+
+
+        /*
+            Esta función cierra la imagen.
+        */
+
+        function cerrarImagen() {
+
+            document
+                .getElementById("visor-imagen")
+                .classList.remove("mostrar");
+
+        }
+
+
+        /*
+            También podemos cerrar la imagen
+            utilizando la tecla ESC.
+        */
+
+        document.addEventListener("keydown", function(event) {
+
+            if (event.key === "Escape") {
+
+                cerrarImagen();
+
+            }
+
+        });
+
+
+        /*
+            Evitamos que el formulario recargue
+            la página al presionar enviar.
+        */
+
+        document
+            .getElementById("formulario")
+            .addEventListener("submit", function(event) {
+
+                event.preventDefault();
+
+                alert("¡Gracias por tu mensaje!");
+
+                this.reset();
+
+            });
+
+    </script>
+
+
+</body>
+
+</html>
